@@ -41,6 +41,6 @@ describe('Robot', () => {
 
   test('Unknown initial state if PLACE was not the first command', () => {
     robot.move();
-    expect(robot.report()).toBe('Robot is not yet placed on the table.');
+    expect(robot.report()).toBe('The robot has not been placed on the table.');
   });
 });

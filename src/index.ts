@@ -15,11 +15,13 @@ const rl = readline.createInterface({
 
 // Command parser
 function executeCommand(command: string) {
-    const [cmd, args] = command.trim().split(" ");
-
+    const cmd = command.split(" ")[0].toUpperCase();
+    const args = command.slice(cmd.length).trim();
+    
     switch (cmd.toUpperCase()) {
         case 'PLACE':
-            const [xStr, yStr, directionStr] = args.split(",");
+            const cleanArgs = args.replace(/\s+/g, "");
+            const [xStr, yStr, directionStr] = cleanArgs.split(",");
             const x = parseInt(xStr, 10);
             const y = parseInt(yStr, 10);
             const direction = directionStr as Direction;

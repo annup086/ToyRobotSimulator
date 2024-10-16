@@ -31,7 +31,7 @@ This project demonstrates fundamental programming concepts in TypeScript, includ
     npm run dev
 
 4. **Run Tests: Run automated tests to verify the robot’s functionality:**
-    npm test
+    npx jest
 
 ## Usage Instructions
 After starting the program, you can enter the following commands:
@@ -107,4 +107,4 @@ ToyRobotProject/
 3. Invalid commands or commands issued before PLACE are handled gracefully.
 
 - Run the tests using:
- npm test
+ npx jest
