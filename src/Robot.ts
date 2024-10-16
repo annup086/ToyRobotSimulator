@@ -69,6 +69,7 @@ export class Robot {
                 case Direction.SOUTH: this.direction = Direction.EAST; break;
                 case Direction.EAST: this.direction = Direction.NORTH; break;
             }
+            console.log("Turned "+this.direction);
         }
     }
 
@@ -85,6 +86,7 @@ export class Robot {
                 case Direction.SOUTH: this.direction = Direction.WEST; break;
                 case Direction.WEST: this.direction = Direction.NORTH; break;
             }
+            console.log("Turned "+this.direction);
         }
     }
 

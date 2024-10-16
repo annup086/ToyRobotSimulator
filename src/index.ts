@@ -44,7 +44,7 @@ function executeCommand(command: string) {
             break;
 
         case 'REPORT':
-            robot.report();
+            console.log(robot.report());
             break;
 
         default:
@@ -54,7 +54,7 @@ function executeCommand(command: string) {
 
 // Start CLI prompt
 console.log("Toy Robot Simulator");
-console.log("Enter commands (e.g., PLACE 0,0,NORTH, MOVE, LEFT, RIGHT, REPORT)");
+console.log("Enter commands (e.g., 'PLACE 0,0,NORTH', 'MOVE', 'LEFT', 'RIGHT', 'REPORT')");
 rl.prompt();
 
 rl.on('line', (input: string) => {
