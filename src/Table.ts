@@ -1,3 +1,5 @@
+//table class to define the size of the table and validate the position.
+
 export class Table {
     private readonly width: number;
     private readonly height: number;
@@ -7,6 +9,7 @@ export class Table {
         this.height = height;
     }
 
+    //to validate the current position of Robot
     isPositionValid(x: number, y: number): boolean {
         return x >= 0 && x < this.width && y >= 0 && y < this.height;
     }

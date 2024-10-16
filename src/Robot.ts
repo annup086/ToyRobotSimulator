@@ -1,5 +1,7 @@
 import { Table } from './Table';
 
+// Enum representing the four cardinal directions that the robot can face.
+// Used to control the orientation of the robot and determine movement directions.
 export enum Direction {
     NORTH = "NORTH",
     EAST = "EAST",
@@ -12,12 +14,13 @@ export class Robot {
     private y: number | null = null;
     private direction: Direction | null = null;
     private readonly table: Table;
-    private hasBeenPlaced: boolean = false; // New flag
+    private hasBeenPlaced: boolean = false; //  flag to see if PLACE is the first command
 
     constructor(table: Table) {
         this.table = table;
     }
 
+    //place command
     place(x: number, y: number, direction: Direction): void {
         if (this.table.isPositionValid(x, y)) {
             this.x = x;
@@ -30,6 +33,7 @@ export class Robot {
         }
     }
 
+    //move command
     move(): void {
         if (!this.hasBeenPlaced) {
             console.log("The robot has not been placed on the table.");
@@ -56,6 +60,7 @@ export class Robot {
         }
     }
 
+    //left command
     left(): void {
         if (!this.hasBeenPlaced) {
             console.log("The robot has not been placed on the table.");
@@ -73,6 +78,7 @@ export class Robot {
         }
     }
 
+    //right command
     right(): void {
         if (!this.hasBeenPlaced) {
             console.log("The robot has not been placed on the table.");
@@ -90,6 +96,7 @@ export class Robot {
         }
     }
 
+    //report command
     report(): string {
         if (!this.hasBeenPlaced) {
             return "The robot has not been placed on the table.";
