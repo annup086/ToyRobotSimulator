@@ -54,6 +54,7 @@ export class Robot {
             if (this.table.isPositionValid(newX, newY)) {
                 this.x = newX;
                 this.y = newY;
+                console.log("Success: Moved forward one unit.");
             } else {
                 console.log("Move ignored: Robot would fall off the table.");
             }

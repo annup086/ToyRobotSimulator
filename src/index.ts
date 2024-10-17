@@ -17,14 +17,14 @@ const rl = readline.createInterface({
 function executeCommand(command: string) {
     const cmd = command.split(" ")[0].toUpperCase();
     const args = command.slice(cmd.length).trim();
-    
+
     switch (cmd.toUpperCase()) {
         case 'PLACE':
             const cleanArgs = args.replace(/\s+/g, "");
             const [xStr, yStr, directionStr] = cleanArgs.split(",");
             const x = parseInt(xStr, 10);
             const y = parseInt(yStr, 10);
-            const direction = directionStr as Direction;
+            const direction = (directionStr || "").toUpperCase() as Direction;
 
             if (!isNaN(x) && !isNaN(y) && direction in Direction) {
                 robot.place(x, y, direction);
