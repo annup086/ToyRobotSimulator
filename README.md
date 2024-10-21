@@ -53,27 +53,27 @@ Here are some examples to demonstrate how the commands work:
 
 - Example A:
 
-PLACE 0,0,NORTH
-MOVE
-REPORT
-Expected Output: 0,1,NORTH
+PLACE 0,0,NORTH<br>
+MOVE<br>
+REPORT<br>
+Expected Output: 0,1,NORTH<br>
 
 - Example B:
 
-PLACE 0,0,NORTH
-LEFT
-REPORT
-Expected Output: 0,0,WEST
+PLACE 0,0,NORTH<br>
+LEFT<br>
+REPORT<br>
+Expected Output: 0,0,WEST<br>
 
 - Example C:
 
-PLACE 1,2,EAST
-MOVE
-MOVE
-LEFT
-MOVE
-REPORT
-Expected Output: 3,3,NORTH
+PLACE 1,2,EAST<br>
+MOVE<br>
+MOVE<br>
+LEFT<br>
+MOVE<br>
+REPORT<br>
+Expected Output: 3,3,NORTH<br>
 
 ## Assumptions and Constraints
 - The first command must be PLACE. Any other commands issued before PLACE are ignored.
